@@ -3,7 +3,7 @@
     "version": "1.1.0",
     "description": "",
     "main": "index.js",
-    "homepage": "https://Oleksandr220.github.io/goit-js-hw-10-food-service",
+    "homepage": "https://Oleksandr220.github.io/goit-js-hw-10-food-service#readme",
     "scripts": {
         "dev": "parcel src/*.html",
         "build": "parcel build src/*.html --public-url npm run bui/goit-js-hw-10-food-service/"
@@ -16,7 +16,7 @@
     "author": "Oleksandr Maslov <oleksandrmaslov663@gmail.com>",
     "license": "ISC",
     "bugs": {
-        "url": "https://Oleksandr220.github.io/goit-js-hw-10-food-service/issues"
+        "url": "https://Oleksandr220.github.io/goit-js-hw-10-food-service"
     },
     "devDependencies": {
         "gh-pages": "^3.1.0",
