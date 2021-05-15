@@ -13,4 +13,4 @@ var e=document.querySelector("body"),t=document.querySelector("#theme-switch-tog
 },{}],"Focm":[function(require,module,exports) {
 "use strict";var e=u(require("./js/make-cards")),r=u(require("./js/change-theme"));function u(e){return e&&e.__esModule?e:{default:e}}
 },{"./js/make-cards":"nfFn","./js/change-theme":"yj0S"}]},{},["Focm"], null)
-//# sourceMappingURL=npm/src.3d018ab0.js.map
+//# sourceMappingURL=/goit-js-hw-10-food-service/src.3d018ab0.js.map

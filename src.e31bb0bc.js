@@ -2162,7 +2162,7 @@ var templateFunction = _handlebars.default.template({
       return undefined;
     };
 
-    return "<li class=\"menu__item\">\r\n  <article class=\"card\">\r\n    <img\r\n      src=\"" + alias4((helper = (helper = lookupProperty(helpers, "image") || (depth0 != null ? lookupProperty(depth0, "image") : depth0)) != null ? helper : alias2, _typeof(helper) === alias3 ? helper.call(alias1, {
+    return "<li class=\"menu__item\">\n  <article class=\"card\">\n    <img\n      src=\"" + alias4((helper = (helper = lookupProperty(helpers, "image") || (depth0 != null ? lookupProperty(depth0, "image") : depth0)) != null ? helper : alias2, _typeof(helper) === alias3 ? helper.call(alias1, {
       "name": "image",
       "hash": {},
       "data": data,
@@ -2176,7 +2176,7 @@ var templateFunction = _handlebars.default.template({
           "column": 20
         }
       }
-    }) : helper)) + "\"\r\n      alt=\"" + alias4((helper = (helper = lookupProperty(helpers, "name") || (depth0 != null ? lookupProperty(depth0, "name") : depth0)) != null ? helper : alias2, _typeof(helper) === alias3 ? helper.call(alias1, {
+    }) : helper)) + "\"\n      alt=\"" + alias4((helper = (helper = lookupProperty(helpers, "name") || (depth0 != null ? lookupProperty(depth0, "name") : depth0)) != null ? helper : alias2, _typeof(helper) === alias3 ? helper.call(alias1, {
       "name": "name",
       "hash": {},
       "data": data,
@@ -2190,7 +2190,7 @@ var templateFunction = _handlebars.default.template({
           "column": 19
         }
       }
-    }) : helper)) + "\"\r\n      class=\"card__image\"\r\n    />\r\n    <div class=\"card__content\">\r\n      <h2 class=\"card__name\">" + alias4((helper = (helper = lookupProperty(helpers, "name") || (depth0 != null ? lookupProperty(depth0, "name") : depth0)) != null ? helper : alias2, _typeof(helper) === alias3 ? helper.call(alias1, {
+    }) : helper)) + "\"\n      class=\"card__image\"\n    />\n    <div class=\"card__content\">\n      <h2 class=\"card__name\">" + alias4((helper = (helper = lookupProperty(helpers, "name") || (depth0 != null ? lookupProperty(depth0, "name") : depth0)) != null ? helper : alias2, _typeof(helper) === alias3 ? helper.call(alias1, {
       "name": "name",
       "hash": {},
       "data": data,
@@ -2204,7 +2204,7 @@ var templateFunction = _handlebars.default.template({
           "column": 37
         }
       }
-    }) : helper)) + "</h2>\r\n      <p class=\"card__price\">\r\n        <i class=\"material-icons\"> monetization_on </i>\r\n        " + alias4((helper = (helper = lookupProperty(helpers, "price") || (depth0 != null ? lookupProperty(depth0, "price") : depth0)) != null ? helper : alias2, _typeof(helper) === alias3 ? helper.call(alias1, {
+    }) : helper)) + "</h2>\n      <p class=\"card__price\">\n        <i class=\"material-icons\"> monetization_on </i>\n        " + alias4((helper = (helper = lookupProperty(helpers, "price") || (depth0 != null ? lookupProperty(depth0, "price") : depth0)) != null ? helper : alias2, _typeof(helper) === alias3 ? helper.call(alias1, {
       "name": "price",
       "hash": {},
       "data": data,
@@ -2218,7 +2218,7 @@ var templateFunction = _handlebars.default.template({
           "column": 17
         }
       }
-    }) : helper)) + " кредитов\r\n      </p>\r\n\r\n      <p class=\"card__descr\">\r\n        " + alias4((helper = (helper = lookupProperty(helpers, "description") || (depth0 != null ? lookupProperty(depth0, "description") : depth0)) != null ? helper : alias2, _typeof(helper) === alias3 ? helper.call(alias1, {
+    }) : helper)) + " кредитов\n      </p>\n\n      <p class=\"card__descr\">\n        " + alias4((helper = (helper = lookupProperty(helpers, "description") || (depth0 != null ? lookupProperty(depth0, "description") : depth0)) != null ? helper : alias2, _typeof(helper) === alias3 ? helper.call(alias1, {
       "name": "description",
       "hash": {},
       "data": data,
@@ -2232,7 +2232,7 @@ var templateFunction = _handlebars.default.template({
           "column": 23
         }
       }
-    }) : helper)) + "\r\n      </p>\r\n\r\n      <ul class=\"tag-list\">\r\n" + ((stack1 = lookupProperty(helpers, "each").call(alias1, depth0 != null ? lookupProperty(depth0, "ingredients") : depth0, {
+    }) : helper)) + "\n      </p>\n\n      <ul class=\"tag-list\">\n" + ((stack1 = lookupProperty(helpers, "each").call(alias1, depth0 != null ? lookupProperty(depth0, "ingredients") : depth0, {
       "name": "each",
       "hash": {},
       "fn": container.program(2, data, 0),
@@ -2248,10 +2248,10 @@ var templateFunction = _handlebars.default.template({
           "column": 17
         }
       }
-    })) != null ? stack1 : "") + "      </ul>\r\n    </div>\r\n\r\n    <button class=\"card__button button\">\r\n      <i class=\"material-icons button__icon\"> shopping_cart </i>\r\n      В корзину\r\n    </button>\r\n  </article>\r\n</li>\r\n";
+    })) != null ? stack1 : "") + "      </ul>\n    </div>\n\n    <button class=\"card__button button\">\n      <i class=\"material-icons button__icon\"> shopping_cart </i>\n      В корзину\n    </button>\n  </article>\n</li>\n";
   },
   "2": function _(container, depth0, helpers, partials, data) {
-    return "        <li class=\"tag-list__item\">" + container.escapeExpression(container.lambda(depth0, depth0)) + "</li>\r\n";
+    return "        <li class=\"tag-list__item\">" + container.escapeExpression(container.lambda(depth0, depth0)) + "</li>\n";
   },
   "compiler": [8, ">= 4.3.0"],
   "main": function main(container, depth0, helpers, partials, data) {
@@ -2264,7 +2264,7 @@ var templateFunction = _handlebars.default.template({
       return undefined;
     };
 
-    return "\r\n" + ((stack1 = lookupProperty(helpers, "each").call(depth0 != null ? depth0 : container.nullContext || {}, depth0, {
+    return "\n" + ((stack1 = lookupProperty(helpers, "each").call(depth0 != null ? depth0 : container.nullContext || {}, depth0, {
       "name": "each",
       "hash": {},
       "fn": container.program(1, data, 0),
@@ -2429,7 +2429,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "52676" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "49255" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
