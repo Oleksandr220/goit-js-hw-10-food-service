@@ -85,7 +85,6 @@ typings/
 
 # Nuxt.js build / generate output
 .nuxt
-dist
 
 
 # Gatsby files
@@ -95,7 +94,7 @@ dist
 # public
 
 # vuepress build output
-.vuepress/dist
+.vuepress
 
 # Serverless directories
 .serverless/
