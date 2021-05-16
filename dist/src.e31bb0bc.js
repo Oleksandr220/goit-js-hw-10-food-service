@@ -117,7 +117,59 @@ parcelRequire = (function (modules, cache, entry, globalName) {
   }
 
   return newRequire;
-})({"../node_modules/handlebars/dist/handlebars.runtime.js":[function(require,module,exports) {
+})({"js/change-theme.js":[function(require,module,exports) {
+var bodyElement = document.querySelector('body');
+var checkboxElement = document.querySelector('#theme-switch-toggle');
+var Theme = {
+  LIGHT: 'light-theme',
+  DARK: 'dark-theme'
+};
+bodyElement.classList.add(localStorage.getItem('theme'));
+
+if (localStorage.getItem('theme') === Theme.DARK) {
+  checkboxElement.checked = 'true';
+  bodyElement.classList.add(Theme.DARK);
+}
+
+var onBtnClasslistToogle = function onBtnClasslistToogle() {
+  if (bodyElement.classList.contains(Theme.LIGHT)) {
+    bodyElement.classList.add(Theme.DARK);
+    bodyElement.classList.remove(Theme.LIGHT);
+    localStorage.removeItem('theme');
+    localStorage.setItem('theme', Theme.DARK);
+  } else {
+    bodyElement.classList.remove(Theme.DARK);
+    bodyElement.classList.add(Theme.LIGHT);
+    localStorage.removeItem('theme', Theme.DARK);
+    localStorage.setItem('theme', Theme.LIGHT);
+  }
+};
+
+checkboxElement.addEventListener('click', onBtnClasslistToogle); // const lightThemeFunc = () => {
+//     bodyElement.classList.add(Theme.LIGHT);
+//     bodyElement.classList.remove(Theme.DARK);
+//     localStorage.removeItem('theme');
+//     localStorage.setItem('theme', Theme.LIGHT);
+// };
+// const darkThemeFunc = () => {
+//     bodyElement.classList.add(Theme.DARK);
+//     bodyElement.classList.remove(Theme.LIGHT);
+//     localStorage.removeItem('theme');
+//     localStorage.setItem('theme', Theme.DARK);
+// };
+// const changeThemeFunc = () => {
+//     if (!checkboxElement.checked) {
+//         lightThemeFunc();
+//     } else {
+//         darkThemeFunc();
+//     }
+// };
+// checkboxElement.addEventListener('change', changeThemeFunc);
+// if (localStorage.getItem('theme') === Theme.DARK) {
+//     checkboxElement.checked = 'true';
+//   darkThemeFunc();
+// }
+},{}],"../node_modules/handlebars/dist/handlebars.runtime.js":[function(require,module,exports) {
 var define;
 var global = arguments[3];
 /**!
@@ -2357,51 +2409,15 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 var menuRef = document.querySelector('.js-menu');
 var cardsMurcup = (0, _foodCards.default)(_menu.default);
 menuRef.insertAdjacentHTML('beforeend', cardsMurcup);
-},{"../teamplates/food-cards.hbs":"teamplates/food-cards.hbs","../menu.json":"menu.json"}],"js/change-theme.js":[function(require,module,exports) {
-var bodyElement = document.querySelector('body');
-var checkboxElement = document.querySelector('#theme-switch-toggle');
-var Theme = {
-  LIGHT: 'light-theme',
-  DARK: 'dark-theme'
-};
-
-var lightThemeFunc = function lightThemeFunc() {
-  bodyElement.classList.add(Theme.LIGHT);
-  bodyElement.classList.remove(Theme.DARK);
-  localStorage.removeItem('theme');
-  localStorage.setItem('theme', Theme.LIGHT);
-};
-
-var darkThemeFunc = function darkThemeFunc() {
-  bodyElement.classList.add(Theme.DARK);
-  bodyElement.classList.remove(Theme.LIGHT);
-  localStorage.removeItem('theme');
-  localStorage.setItem('theme', Theme.DARK);
-};
-
-var changeThemeFunc = function changeThemeFunc() {
-  if (!checkboxElement.checked) {
-    lightThemeFunc();
-  } else {
-    darkThemeFunc();
-  }
-};
-
-checkboxElement.addEventListener('change', changeThemeFunc);
-
-if (localStorage.getItem('theme') === Theme.DARK) {
-  checkboxElement.checked = 'true';
-  darkThemeFunc();
-}
-},{}],"index.js":[function(require,module,exports) {
+},{"../teamplates/food-cards.hbs":"teamplates/food-cards.hbs","../menu.json":"menu.json"}],"index.js":[function(require,module,exports) {
 "use strict";
-
-var _makeCards = _interopRequireDefault(require("./js/make-cards"));
 
 var _changeTheme = _interopRequireDefault(require("./js/change-theme"));
 
+var _makeCards = _interopRequireDefault(require("./js/make-cards"));
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-},{"./js/make-cards":"js/make-cards.js","./js/change-theme":"js/change-theme.js"}],"../node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
+},{"./js/change-theme":"js/change-theme.js","./js/make-cards":"js/make-cards.js"}],"../node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
 var OldModule = module.bundle.Module;
@@ -2429,7 +2445,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "49255" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "50489" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
