@@ -123,13 +123,22 @@ var checkboxElement = document.querySelector('#theme-switch-toggle');
 var Theme = {
   LIGHT: 'light-theme',
   DARK: 'dark-theme'
-};
-bodyElement.classList.add(localStorage.getItem('theme'));
+}; // bodyElement.classList.add(Theme.LIGHT)
+// bodyElement.classList.add(localStorage.getItem('theme'));
 
-if (localStorage.getItem('theme') === Theme.DARK) {
-  checkboxElement.checked = 'true';
-  bodyElement.classList.add(Theme.DARK);
-}
+var onLocalStorageGet = function onLocalStorageGet() {
+  bodyElement.classList.add(Theme.LIGHT);
+
+  if (localStorage.getItem('theme') === Theme.DARK) {
+    checkboxElement.checked = 'true';
+    bodyElement.classList.remove(Theme.LIGHT);
+    bodyElement.classList.add(Theme.DARK);
+  } else {
+    bodyElement.classList.add(Theme.LIGHT);
+  }
+};
+
+onLocalStorageGet();
 
 var onBtnClasslistToogle = function onBtnClasslistToogle() {
   if (bodyElement.classList.contains(Theme.LIGHT)) {
@@ -2445,7 +2454,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "50489" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "51963" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
