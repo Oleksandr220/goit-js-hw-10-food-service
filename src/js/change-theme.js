@@ -6,6 +6,8 @@ const Theme = {
     DARK: 'dark-theme',
 };
 
+
+bodyElement.classList.add(Theme.LIGHT)
 bodyElement.classList.add(localStorage.getItem('theme'));
 
 if (localStorage.getItem('theme') === Theme.DARK) {
