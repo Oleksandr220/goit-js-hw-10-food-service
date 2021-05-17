@@ -7,13 +7,23 @@ const Theme = {
 };
 
 
-bodyElement.classList.add(Theme.LIGHT)
-bodyElement.classList.add(localStorage.getItem('theme'));
+// bodyElement.classList.add(Theme.LIGHT)
+// bodyElement.classList.add(localStorage.getItem('theme'));
 
-if (localStorage.getItem('theme') === Theme.DARK) {
-    checkboxElement.checked = 'true';
-        bodyElement.classList.add(Theme.DARK)
-    }
+const onLocalStorageGet = () => {
+    bodyElement.classList.add(Theme.LIGHT)
+
+    if (localStorage.getItem('theme') === Theme.DARK) {
+        checkboxElement.checked = 'true';
+        bodyElement.classList.remove(Theme.LIGHT)
+            bodyElement.classList.add(Theme.DARK)
+        }
+        else{
+            bodyElement.classList.add(Theme.LIGHT)
+        }
+}
+
+onLocalStorageGet()
 
 const onBtnClasslistToogle = () => {
     if(bodyElement.classList.contains(Theme.LIGHT)){
